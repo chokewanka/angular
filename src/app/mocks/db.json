@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": 101,
+      "name": "Test Modificado"
+    },
+    {
+      "id": 102,
+      "name": "Laptop 2"
+    },
+    {
+      "id": 103,
+      "name": "Tablet 3"
+    },
+    {
+      "id": 200,
+      "name": "Carrito de Juguete"
+    },
+    {
+      "id": 300,
+      "name": "Kindle"
+    },
+    {
+      "id": 301,
+      "name": "Agenda Electronica"
+    },
+    {
+      "id": 302,
+      "name": "Consola de Videojuegos"
+    },
+    {
+      "name": "Test Nuevo",
+      "id": 303
+    }
+  ]
+}

@@ -7,6 +7,8 @@ import { SortPipe } from './shared/pipes/sort.pipe';
 import { ShortTextPipe } from './shared/pipes/short-text.pipe';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { ProductService } from './shared/services/product.services';
+import { ProductFormComponent } from './shared/forms/product-form/product-from.component';
 
 
 @NgModule({
@@ -14,6 +16,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     ListProductComponent,
     HoverDirective,
     ShortTextPipe,
+    ProductFormComponent,
     CreateProductComponent,
     EditProductComponent
   ],
@@ -27,7 +30,8 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     EditProductComponent
   ],
   providers: [
-    SortPipe
+    SortPipe,
+    ProductService
   ]
 })
 export class ProductsModule { }
