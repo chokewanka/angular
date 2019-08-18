@@ -8,12 +8,18 @@
     <thead>
         <td scope="col">#</td>
         <td scope="col">Name</td>
+        <td scope="col">Detail</td>
+        <td scope="col">Price</td>
+        <td scope="col">Stock</td>
         <td scope="col">Actions</td>
     </thead>
     <tbody>
         <tr appHover *ngFor="let prod of allProducts; let i = index;">
             <th scope="row">{{i + 1}}</th>
-            <td scope="row">{{prod.name | shortText:10}}</td>
+            <td scope="row">{{prod.name}}</td>
+            <td scope="row">{{prod.detail | shortText:20}}</td>
+            <td scope="row">{{prod.price | currency: 'S/. '}}</td>
+            <td scope="row">{{prod.stock}}</td>
             <td scope="row">
                 <button class="btn btn-sm btn-info" type="button">Deshabilitar</button>
                 <a [routerLink]="['/products',prod.id]" class="btn btn-sm btn-primary">Ver Detalles</a>

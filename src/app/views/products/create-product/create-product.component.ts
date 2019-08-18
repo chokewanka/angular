@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProductService } from '../shared/services/product.services';
 import Product from '../product.model';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-product',
@@ -10,23 +11,26 @@ import { Subscription } from 'rxjs';
 })
 export class CreateProductComponent implements OnInit, OnDestroy {
 
-  updateSubs:Subscription;
+  createSubs:Subscription;
 
   constructor(
-    private productService: ProductService
+    private productService: ProductService,
+    private router:Router
   ) { }
 
   ngOnInit() {
   }
 
-  onSubmit(){
-    this.productService.createProduct({name: 'Test Nuevo'}).subscribe((product:Product) => {
-      console.log('Creado');
+  onSubmit(product: Product){
+    this.createSubs = this.productService.createProduct(product).subscribe((product:Product) => {
+      this.router.navigate(['/products']);
     });
   }
 
   ngOnDestroy(){
-    this.updateSubs.unsubscribe();
+    if (this.createSubs){
+      this.createSubs.unsubscribe();
+    }
   }
 
 }

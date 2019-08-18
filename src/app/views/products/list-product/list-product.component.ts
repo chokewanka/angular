@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Product from '../product.model';
 import { ProductsModule } from '../products.module';
-import { SortPipe } from '../shared/pipes/sort.pipe';
+//import { SortPipe } from '../shared/pipes/sort.pipe';
 import { products } from 'src/app/mocks/products';
 import { ProductService } from '../shared/services/product.services';
 
@@ -15,7 +15,7 @@ export class ListProductComponent implements OnInit {
   allProducts: Product[];
 
   constructor(
-    private sortPipe: SortPipe,
+    //private sortPipe: SortPipe,
     private productService: ProductService
     ) { }
 
@@ -26,7 +26,7 @@ export class ListProductComponent implements OnInit {
   }
 
   onSort(value:string){
-    this.sortPipe.transform(this.allProducts,value);
+    //this.sortPipe.transform(this.allProducts,value);
   }
 
   onRemove(id: number){

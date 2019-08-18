@@ -19,22 +19,22 @@ export class ProductService{
     }
 
     getProducts(){
-        const URL:string = `${this.api}/${this.endpoint}`;
+        const URL:string = `${this.api}/${this.endpoint}/`;
         return this.http.get(URL);
     }
 
     getProduct(id: number){
-        const URL:string = `${this.api}/${this.endpoint}/${id}`;
+        const URL:string = `${this.api}/${this.endpoint}/${id}/`;
         return this.http.get(URL);
     }
 
     deleteProduct(id: number){
-        const URL:string = `${this.api}/${this.endpoint}/${id}`;
+        const URL:string = `${this.api}/${this.endpoint}/${id}/`;
         return this.http.delete(URL);
     }
 
     createProduct(product:Product){
-        const URL:string = `${this.api}/${this.endpoint}`;
+        const URL:string = `${this.api}/${this.endpoint}/`;
 
         return this.http.post(URL, product, {
             headers: {
@@ -44,7 +44,7 @@ export class ProductService{
     }
 
     updateProduct(product:Product){
-        const URL:string = `${this.api}/${this.endpoint}/${product.id}`;
+        const URL:string = `${this.api}/${this.endpoint}/${product.id}/`;
 
         return this.http.put(URL, product, {
             headers: {

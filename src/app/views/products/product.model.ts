@@ -1,9 +1,10 @@
 export default class Product{
     id?: number;
     name: string;
+    detail: string;
+    price: number;
+    stock: number;
 
-    constructor(id: number, name: string){
-        this.id = id;
-        this.name = name;
+    constructor(){
     }
 }

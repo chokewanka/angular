@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { ListProductComponent } from './list-product/list-product.component';
 import { HoverDirective } from './shared/directives/hover.directive';
-import { SortPipe } from './shared/pipes/sort.pipe';
+//import { SortPipe } from './shared/pipes/sort.pipe';
 import { ShortTextPipe } from './shared/pipes/short-text.pipe';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
@@ -22,7 +23,8 @@ import { ProductFormComponent } from './shared/forms/product-form/product-from.c
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     ListProductComponent,
@@ -30,7 +32,7 @@ import { ProductFormComponent } from './shared/forms/product-form/product-from.c
     EditProductComponent
   ],
   providers: [
-    SortPipe,
+    //SortPipe,
     ProductService
   ]
 })

@@ -2,35 +2,73 @@
   "products": [
     {
       "id": 101,
-      "name": "Test Modificado"
+      "name": "Test Modificado",
+      "detail": "Detalle del Producto",
+      "price": "9.99",
+      "stock": "100"
     },
     {
       "id": 102,
-      "name": "Laptop 2"
+      "name": "Laptop 2",
+      "detail": "Detalle del Producto",
+      "price": "9.99",
+      "stock": "100"
     },
     {
       "id": 103,
-      "name": "Tablet 3"
+      "name": "Tablet 3",
+      "detail": "Detalle del Producto",
+      "price": "9.99",
+      "stock": "100"
     },
     {
       "id": 200,
-      "name": "Carrito de Juguete"
+      "name": "Carrito de Juguete",
+      "detail": "Detalle del Producto",
+      "price": "9.99",
+      "stock": "100"
     },
     {
       "id": 300,
-      "name": "Kindle"
+      "name": "Kindle",
+      "detail": "Detalle del Producto",
+      "price": "9.99",
+      "stock": "100"
     },
     {
       "id": 301,
-      "name": "Agenda Electronica"
+      "name": "Agenda Electronica",
+      "detail": "Detalle del Producto",
+      "price": "9.99",
+      "stock": "100"
     },
     {
       "id": 302,
-      "name": "Consola de Videojuegos"
+      "name": "Consola de Videojuegos",
+      "detail": "Detalle del Producto",
+      "price": "9.99",
+      "stock": "100"
     },
     {
       "name": "Test Nuevo",
-      "id": 303
+      "id": 303,
+      "detail": "Detalle del Producto",
+      "price": "9.99",
+      "stock": "100"
+    },
+    {
+      "name": "Cargador de Celular 2",
+      "detail": "Puerto Micro USB",
+      "price": "19.99",
+      "stock": "200",
+      "id": 304
+    },
+    {
+      "name": "Palo de Selfie",
+      "detail": "Utilizado para tomarse fotos uno mismo",
+      "price": "29.90",
+      "stock": "500",
+      "id": 305
     }
   ]
 }

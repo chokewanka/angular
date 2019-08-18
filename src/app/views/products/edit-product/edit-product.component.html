@@ -1,2 +1,7 @@
-<p>edit-product works!</p>
-<app-product-form type="edit" (handleSubmit)="onSubmit($event)"></app-product-form>
+<h2>Editar Producto</h2>
+<app-product-form 
+    *ngIf="product"
+    type="edit"
+    (handleSubmit)="onSubmit($event)"
+    [model]="product"
+></app-product-form>

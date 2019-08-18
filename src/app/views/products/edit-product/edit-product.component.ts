@@ -29,14 +29,16 @@ export class EditProductComponent implements OnInit, OnDestroy {
 
   }
 
-  onSubmit(){
-    this.productService.updateProduct({id: this.product.id, name: 'Test Modificado'}).subscribe(() => {
+  onSubmit(product: Product){
+    this.updateSubs = this.productService.updateProduct(product).subscribe(() => {
       this.router.navigate(['/products']);
     });
   }
 
   ngOnDestroy(){
-    this.updateSubs.unsubscribe();
+    if(this.updateSubs){
+      this.updateSubs.unsubscribe();
+    }
   }
 
 }

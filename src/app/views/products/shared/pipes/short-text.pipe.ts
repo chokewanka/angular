@@ -6,6 +6,6 @@ import { PipeTransform, Pipe } from "@angular/core";
 export class ShortTextPipe implements PipeTransform{
     transform(text: string, len: number): string{
         //Producto de Limpieza => Producto de L...
-        return text.length > len ? text.substr(0,len) + '...' : text;
+        return text && text.length > len ? text.substr(0,len) + '...' : text;
     }
 }
